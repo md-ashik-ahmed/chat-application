@@ -58,7 +58,6 @@ app.post('/api/register', async (req, res, next) => {
 
 
 
-
 app.post('/api/login', async (req, res, next) => {
     try {
         const { email, password } = req.body;
@@ -111,7 +110,6 @@ app.post('/api/conversation', async (req, res) => {
 
 
 
-
 app.post('/api/message', async (req, res) => {
     try {
         const { conversationId, senderId, message, receiverId = '' } = req.body;
@@ -132,8 +130,6 @@ app.post('/api/message', async (req, res) => {
         console.log(error, 'Error')
     }
 })
-
-
 
 
 
@@ -163,8 +159,6 @@ app.get('/api/message/:conversationId', async (req, res) => {
         console.log('Error', error)
     }
 })
-
-
 
 
 
